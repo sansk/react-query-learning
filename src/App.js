@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import { HomePage } from './components/Home.page'
 import { RQHeroesPage } from './components/RQHeroes.page'
@@ -14,24 +14,18 @@ function App() {
               <Link to='/'>Home</Link>
             </li>
             <li>
-              <Link to='/super-heroes'>Traditional Super Heroes</Link>
+              <Link to='/heroes'>Traditional Heroes</Link>
             </li>
             <li>
-              <Link to='/rq-super-heroes'>RQ Super Heroes</Link>
+              <Link to='/rq-heroes'>RQ Heroes</Link>
             </li>
           </ul>
         </nav>
-        <Switch>
-          <Route path='/super-heroes'>
-            <SuperHeroesPage />
-          </Route>
-          <Route path='/rq-super-heroes'>
-            <RQSuperHeroesPage />
-          </Route>
-          <Route path='/'>
-            <HomePage />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/heroes' element={<HeroesPage />} />
+          <Route path='/rq-heroes' element={<RQHeroesPage />} />
+        </Routes>
       </div>
     </Router>
   )
