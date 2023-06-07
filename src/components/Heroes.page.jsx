@@ -9,7 +9,6 @@ export const HeroesPage = () => {
 
   const fetchData = async () => {
     const resp = await axios.get(url);
-    console.log(resp.data);
     setData(resp.data);
     setIsLoading(false);
   };
