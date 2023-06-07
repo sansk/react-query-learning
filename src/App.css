@@ -10,3 +10,19 @@ nav ul li {
   list-style-type: none;
   margin-right: 16px;
 }
+
+section {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 800px;
+}
+
+.item-container {
+  background: #3da1f3;
+  width: 200px;
+  margin: 2rem;
+  border-radius: 1rem;
+  color: #fefefe;
+  padding: 1rem;
+}
