@@ -1,0 +1,29 @@
+{
+    "heros": [
+        {
+            "id": 1,
+            "name": "Iron Man",
+            "alterEgo": "Tony Stark"
+        },
+        {
+            "id": 2,
+            "name": "Spiderman",
+            "alterEgo": "Peter Parker"
+        },
+        {
+            "id": 3,
+            "name": "Captain America",
+            "alterEgo": "Steve Rogers"
+        },
+        {
+            "id": 4,
+            "name": "The Hulk",
+            "alterEgo": "Bruce Banner"
+        },
+        {
+            "id": 5,
+            "name": "God of Thunder",
+            "alterEgo": "Thor Odinson"
+        }
+    ]
+}
