@@ -4,16 +4,24 @@ import axios from "axios";
 const url = "http://localhost:4000/heroes";
 
 export const RQHeroesPage = () => {
-  const { isLoading, error, data } = useQuery({
-    queryKey: ["heroes"],
-    queryFn: async () => {
+  const { isLoading, error, data, isFetching } = useQuery(
+    ["heroes"],
+    async () => {
       const resp = await axios.get(url);
       return resp;
     },
-  });
+    {
+      refetchOnWindowFocus: true
+    }
+  );
 
+  console.log({ isLoading, isFetching });
   if (isLoading) {
     return <h2>Loading...</h2>;
+  }
+
+  if (error) {
+    return <h2>{error.message}</h2>;
   }
 
   return (
