@@ -3,6 +3,7 @@ import './App.css'
 import { HomePage } from './components/Home.page'
 import { RQHeroesPage } from './components/RQHeroes.page'
 import { HeroesPage } from './components/Heroes.page'
+import { RQHeroPage } from "./components/RQHero.page";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
@@ -30,6 +31,7 @@ function App() {
             <Route path='/' element={<HomePage />} />
             <Route path='/heroes' element={<HeroesPage />} />
             <Route path='/rq-heroes' element={<RQHeroesPage />} />
+            <Route path='/rq-heroes/:id' element={<RQHeroPage />} />
           </Routes>
         </div>
       </Router>

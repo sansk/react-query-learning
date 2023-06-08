@@ -24,6 +24,11 @@
             "id": 5,
             "name": "God of Thunder",
             "alterEgo": "Thor Odinson"
+        },
+        {
+            "id": 6,
+            "name": "Black Widow",
+            "alterEgo": "Natasha Ramanof"
         }
     ]
 }
